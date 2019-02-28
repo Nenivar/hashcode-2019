@@ -97,4 +97,9 @@ def readIn(fileName):
                 f.write('{}\n'.format(s.getIds()))
 
 readIn('b_lovely_landscapes.txt')
+<<<<<<< HEAD
 #readIn('c_memorable_moments.txt')
+=======
+#readIn('b_lovely_landscapes.txt')
+#readIn('c_memorable_moments.txt')
+>>>>>>> d176361c65135e8c712b12be13cb15db06db5480
