@@ -85,10 +85,16 @@ def readIn(fileName):
         print(slides[501].getTags())
 
         sort = sorted(slides, key=lambda x: len(x.getTags()))
+
+        final = []
+        for i in range(1, int(len(sort) / 2) - 1):
+            final.append(sort[i])
+            final.append(sort[len(sort) - i])
+
         with open('{}.ans'.format(fileName.split('.')[0]), 'w') as f:
-            f.write('{}\n'.format(len(slides)))
+            f.write('{}\n'.format(len(final)))
             for s in sort:
                 f.write('{}\n'.format(s.getIds()))
 
-#readIn('b_lovely_landscapes.txt')
-readIn('c_memorable_moments.txt')
+readIn('b_lovely_landscapes.txt')
+#readIn('c_memorable_moments.txt')
